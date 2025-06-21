@@ -1,0 +1,71 @@
+/* ====================== */
+/* ESTILOS GLOBAIS */
+/* ====================== */
+body {
+  padding-top: 8em;
+  color: rgb(var(--bs-tertiary-color-rgb));
+  background-color: #315231;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ====================== */
+/* COMPONENTES DO CAROUSEL */
+/* ====================== */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 32rem;
+}
+
+/* ====================== */
+/* CONTEÚDO DE MARKETING */
+/* ====================== */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 5em;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  letter-spacing: -0.05rem;
+}
+
+/* ====================== */
+/* MEDIA QUERIES RESPONSIVAS */
+/* ====================== */
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}

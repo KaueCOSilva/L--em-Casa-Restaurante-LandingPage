@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- css externo mesmo do index -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- link bootstrap carrossel -->
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/" />
+  <!--js nosso-->
+  <script src="js/script.js"></script>
+  <!-- CSS do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <title>Cardápio</title>
+  <!-- icone da aba do navegador -->
+  <link rel="icon" href="imagens/logo_site.png" />
+  <!-- Script adicional e CSS Bootstrap para estilos -->
+  <script src="../assets/assets/js/color-modes.js"></script>
+  <link href="../assets/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- CABEÇALHO com barra de navegação  q se adapta-->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+      <div class="container-fluid">
+        <div class="row w-100 align-items-center">
+          <!-- Coluna da esquerda (botão do menu mobile) -->
+          <div class="col-4 d-flex">
+
+          </div>
+
+          <!-- Coluna do meio (logo centralizada) -->
+          <div class="col-4 d-flex justify-content-center">
+            <a href="index.html">
+              <img src="imagens/logo.png" alt="Logo" style="height: 80px; margin-bottom: 15px;" /></a>
+          </div>
+          <br>
+          <!-- Coluna da direita (barra de pesquisa) -->
+          <div class="col-12 col-md-4 d-flex justify-content-end align-items-center">
+            <form class="d-flex align-items-center" role="search" style="gap: 10px;">
+              <input id="searchInput" type="text" placeholder="pesquisar..." class="search-line hidden">
+              <img id="searchIcon" src="imagens/lupa.png" alt="OK" height="38" class="btn-img" style="cursor: pointer;">
+            </form>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- tirei menu -->
+          </div>
+        </div>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+  <div class="imgbody" style="padding-top: 100px;">
+    <main class="body">
+
+      <div class="container-seta-voltar">
+        <a href="index.html" title="Voltar para o início">
+          <img src="imagens/seta_voltar.png" alt="Voltar" />
+        </a>
+      </div>
+      <!--essa frase e para as imagens dos produtos, referenciei na documentacao-->
+      <div class="caixa-mensagem">
+        <p><strong>⚠️ Aviso:</strong> As imagens exibidas neste site são apenas ilustrativas e
+          temporárias, usadas para apresentar os produtos visualmente. Este site é um protótipo
+          e as imagens serão atualizadas posteriormente para melhor representá-los.</p>
+
+        <!--============CARDAPIO COMECA AQUI===============================================-->
+
+      </div>
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Hamburguers</h2>
+          <div class="section-underline"></div>
+        </div>
+      </div>
+
+      <!-- Linha 1 de hambúrgueres -->
+      <main class="displayflex">
+        <!--eu coloquei esse pesquisavel em todas as classes para conseguir pesquisar por nome-->
+        <main class="comentários pesquisavel">
+          <h3>Hambúrguer Artesanal</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/ham_artesanal.png" alt="Hamburguer Artesanal" class="img-produto" />
+          <!-- Botão para mostrar/ocultar ingredientes -->
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <!-- Ingredientes ocultos inicialmente -->
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer, bacon, queijo, molho especial
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>X Burger</h3>
+          <div class="risquinho-verde"></div>
+          <br />
+          <img src="imagens/ProductsImages/Xburguer.png" alt="XBurguer" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, presunto e queijo
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>X Salada</h3>
+          <div class="risquinho-verde"></div>
+          <br />
+          <img src="imagens/ProductsImages/Xsalada.png" alt="XSalada" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, presunto, queijo, alface
+            e tomate
+          </div>
+        </main>
+      </main>
+
+      <!-- Linha 2 de hambúrgueres -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>X Bacon</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/Xbacon.png" alt="XBacon" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, presunto, queijo e bacon
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>X Salada Egg</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/XsaladaEgg.png" alt="XSaladaEgg" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, presunto, queijo, alface,
+            tomate e ovo
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>X Salada Bacon</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/XsaladaBacon.png" alt="XSaladaBacon" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, presunto, queijo, alface,
+            tomate e bacon
+          </div>
+        </main>
+      </main>
+
+      <!-- Linha 3 de hambúrgueres -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>X Egg Bacon</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/XsaladaBaconEgg.png" alt="XBaconEgg" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, ovo, presunto, queijo e
+            bacon
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>X Egg</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/XEgg.png" alt="XEgg" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, hambúrguer artesanal, ovo, presunto e queijo
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>X Tudo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/Xtudo.png" alt="Xtudo" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: hambúrguer artesanal, presunto, queijo, ovo, bacon,
+            alface e tomate
+          </div>
+        </main>
+      </main>
+
+      <!-- Seção: Refrigerantes -->
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Refrigerantes</h2>
+          <div class="section-underline"></div>
+        </div>
+      </div> <!-- Primeira linha de refrigerantes -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Coca-Cola 1 litro(Vidro)</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cocacola1l_vidro.png" alt="Coca Cola 1 litro(vidro)" class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Coca-Cola 1 litro(Descartável)</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cocacola1l_descartavel.png" alt="Coca Cola 1 litro(Descartável)"
+            class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Coca-Cola 2 litros</h3>
+          <div class="risquinho-verde"></div>
+          <br />
+          <img src="imagens/ProductsImages/cocacola2l.png" alt="Coca Cola 2 litros" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Segunda linha de refrigerantes -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Refrigerante 2 litros</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/refrigerantes2l.png" alt="Refrigerante 2 litros" class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Energético latão</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/energetico_latao.png" alt="Energético latão" class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Sprite lemon</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/sprite_limon.png" alt="Sprite lemon" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Terceira linha de refrigerantes -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>H2O limoneto</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/h20_limoneto.png" alt="H2O limoneto" class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Suco All 300 ml(sabores)</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/suco_all300ml.png" alt="Suco All 300 ml" class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Água</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/agua.png" alt="Água" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Quarta linha de refrigerantes -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Água com Gás</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/agua_comgas.png" alt="Água com Gás" class="img-produto" />
+        </main>
+        <main class="comentários pesquisavel">
+          <h3>Limão e Gelo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/sprite.png" alt="Limão e Gelo" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Seção: Cachorro-quente -->
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Cachorro-Quente</h2>
+          <div class="section-underline"></div>
+        </div>
+      </div>
+
+      <!-- Primeira linha de cachorro-quente -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Cachorro-Quente Carne</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cachorroquente_carne.png" alt="Cachorro Quente de Carne"
+            class="img-produto" />
+          <!-- Botão para mostrar ingredientes -->
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <!-- Descrição dos ingredientes escondida -->
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, salsicha, carne e batata palha
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Cachorro-Quente Frango</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cachorroquente_frango.png" alt="Cachorro Quente de Frango"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, salsicha, frango e batata palha
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Cachorro-Quente Misto</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cachorroquente_misto.png" alt="Cachorro Quente Misto" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, salsicha, carne e frango, bacon, cebola, alface
+            e batata palha
+          </div>
+        </main>
+      </main>
+
+      <!-- Segunda linha de cachorro-quente -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Cachorro-Quente Especial</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cachorroquente_especial.png" alt="Cachorro Quente Especial"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, salsicha, carne, frango ou misto, bacon,
+            cebola, alface e batata palha
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Cachorro-Quente Vegetariano</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/cachorroquente_vegetariano.png" alt="Cachorro Quente Vegetariano"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pão, queijo, purê de batata, ervilha, milho,
+            azeitona, catupiry ou cheddar e batata palha
+          </div>
+        </main>
+      </main>
+
+      <!-- Seção: Porções -->
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Porções</h2>
+          <div class="section-underline"></div>
+        </div>
+      </div>
+
+      <!-- Primeira linha de porções -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Mista</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_mista.png" alt="Porcao Mista" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Filé de frango empanado, linguiça calabresa
+            acebolada, isca de carne acebolada, batata frita e molho especial
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Isca de Carne Acebolada</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_carneacebolada.png" alt="Porcao Carne Acebolada"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Tiras de carne bovina, cebola roxa fatiada, alho,
+            molho shoyu, azeite e pimenta‑do‑reino
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Isca de Frango Acebolada</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_frangoacebolada.png" alt="Porcao Frango Acebolada"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Tiras de peito de frango, cebola branca em rodelas,
+            alho, molho de soja, azeite, salsinha e pimenta‑do‑reino
+          </div>
+        </main>
+      </main>
+
+      <!-- Segunda linha de porções -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Isca de Frango Empanada</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_frangoempanado.png" alt="Porcao Frango Empanado"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Tiras de peito de frango, farinha de trigo, ovo,
+            farinha de rosca temperada, sal e pimenta
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Frango á Passarinho</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_frangopassarinho.png" alt="Porcao Frango a Passarinho"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Pedaços de frango com osso, alho amassado, suco de
+            limão, sal, pimenta‑do‑reino e ervas finas
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Calabresa Acebolada</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_calabresaacebolada.png" alt="Porcao calabresa Acebolada"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Rodelas de linguiça calabresa, cebola em rodelas,
+            azeite, orégano e pimenta‑calabresa
+          </div>
+        </main>
+      </main>
+
+      <!-- Terceira linha de porções -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Mandioca Frita</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_mandiocafrita.png" alt="Porcao Mandioca Frita" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Mandioca cozida, sal, óleo para fritar e salsa
+            picada
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Kibe Frito</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_kibefrito.png" alt="Porcao Kibe Frito" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Carne bovina moída, trigo para kibe hidratado,
+            cebola, hortelã, alho, cominho e sal
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Bolinha de Queijo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_bolinhaqueijo.png" alt="Porcao Bolinha de Queijo"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Muçarela, farinha de trigo, ovo, farinha de rosca,
+            sal, pimenta e óleo
+          </div>
+        </main>
+      </main>
+
+      <!-- Quarta linha de porções -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Batata Frita</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_batatafrita.png" alt="Porcao Batata Frita" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Batata, sal e óleo para fritar
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Batata Frita com Cheddar e Bacon</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_batatacombacon.png" alt="Porcao Batata Frita com  Cheddar e Bacon"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Batata, cheddar derretido, bacon crocante, cebolinha
+            e óleo para fritar
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Frios</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_frios.png" alt="Porcao Batata Frita com  Cheddar e Bacon"
+            class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Mussarela, presunto e azeitonas
+          </div>
+        </main>
+      </main>
+
+      <!-- Seção: Espetos e Acompanhamentos -->
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Espetos e Acompanhamentos</h2>
+          <div class="section-underline"></div>
+        </div>
+
+      </div> <!-- Primeira linha de espetos -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Carne</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/carnenoespeto.png" alt="Carne no Espeto" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Kafta com Queijo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_kafta.png" alt="kafta com Queijo" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Medalhão de Frango</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_medalhao.png" alt="Medalhao" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Segunda linha de espetos -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Linguiça Toscana</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_linguica.png" alt="Linguica" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Queijo Coalho</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_queijocoalho.png" alt="Queijo Coalho" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Arroz</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_arroz.png" alt="Arroz" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Terceira linha de espetos -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Mandioca Cozida</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_mandioca.png" alt="Mandioca" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Vinagrete</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/porcao_vinagrete.png" alt="Vinagrete" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Seção: Pastéis -->
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Pastéis</h2>
+          <div class="section-underline"></div>
+        </div>
+      </div>
+      <!-- Primeira linha de pastéis -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Carne</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_carne.png" alt="Pastel de Carne" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Frango</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_frango.png" alt="Pastel de Frango" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Queijo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastelqueijo.png" alt="Pastel de Queijo" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Segunda linha de pastéis -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Pizza</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_pizza.png" alt="Pastel de Pizza" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Palmito</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastelpalmito.png" alt="Pastel de Palmito" class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Carne com Queijo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_carnequeijo.png" alt="Pastel de Carne e Queijo" class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Terceira linha de pastéis -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Carne com Catupiry</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_carnecatupiry.png" alt="Pastel de Carne e Catupiry"
+            class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Carne com Queijo e Catupiry</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_carnecatuqueijo.png" alt="Pastel de Carne Queijo e Catupiry"
+            class="img-produto" />
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel de Frango com Queijo</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_frangoqueijo.png" alt="Pastel de Frango com Queijo"
+            class="img-produto" />
+        </main>
+      </main>
+
+      <!-- Quarta linha de pastéis com ingredientes toggle -->
+      <main class="displayflex">
+        <main class="comentários pesquisavel">
+          <h3>Pastel 2 Queijos</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_4queijos.png" alt="Pastel 2 Queijos" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Mussarela e Catupiry
+          </div>
+        </main>
+
+        <main class="comentários pesquisavel">
+          <h3>Pastel 3 Queijos</h3>
+          <div class="risquinho-verde"></div>
+          <img src="imagens/ProductsImages/pastel_4queijos.png" alt="Pastel 3 Queijos" class="img-produto" />
+          <button class="botaoAbertura" onclick="toggleMensagem(this)">
+            Ingredientes
+          </button>
+          <div class="mensagem" style="display: none">
+            Ingredientes: Mussarela, Catupiry e Cheddar
+          </div>
+        </main>
+      </main>
+
+      <!-- Seção: Prato Exclusivo -->
+      <div class="row mb-5" style="margin-top: 2em;">
+        <div class="col-12">
+          <h2 class="section-title">Pratos Exclusivos</h2>
+          <div class="section-underline"></div>
+        </div>
+        <!-- Primeira linha de pratos exclusivos -->
+        <main class="displayflex">
+          <main class="comentários pesquisavel">
+            <h3>Estrogonofe de Frango</h3>
+            <div class="risquinho-verde"></div>
+            <img src="imagens/ProductsImages/estrogonoff_prato.png" alt="Estrogonofe" class="img-produto" />
+            <button class="botaoAbertura" onclick="toggleMensagem(this)">
+              Ingredientes
+            </button>
+            <div class="mensagem" style="display: none">
+              Ingredientes: Peito de frango, creme de leite, molho de tomate,
+              cebola, alho, sal, pimenta-do-reino, óleo ou manteiga
+            </div>
+          </main>
+
+          <main class="comentários pesquisavel">
+            <h3>Bife a Cavalo</h3>
+            <div class="risquinho-verde"></div>
+            <img src="imagens/ProductsImages/bifeacavalo.png" alt="Bife a Cavalo" class="img-produto" />
+            <button class="botaoAbertura" onclick="toggleMensagem(this)">
+              Ingredientes
+            </button>
+            <div class="mensagem" style="display: none">
+              Ingredientes: Bife (alcatra, contra-filé ou outra carne bovina),
+              ovo frito, alho, sal, pimenta-do-reino, óleo para fritar
+            </div>
+          </main>
+
+          <main class="comentários pesquisavel">
+            <h3>Parmegiana de Frango</h3>
+            <div class="risquinho-verde"></div>
+            <img src="imagens/ProductsImages/parmegianafrango.png" alt="Parmegiana" class="img-produto" />
+            <button class="botaoAbertura" onclick="toggleMensagem(this)">
+              Ingredientes
+            </button>
+            <div class="mensagem" style="display: none">
+              Ingredientes: Peito de frango empanado, molho de tomate, queijo
+              muçarela, presunto (opcional), farinha de trigo, farinha de rosca,
+              ovos, sal, pimenta
+            </div>
+          </main>
+        </main>
+
+        <!-- Segunda linha de pratos exclusivos -->
+        <main class="displayflex">
+          <main class="comentários pesquisavel">
+            <h3>Parmegiana de Carne</h3>
+            <div class="risquinho-verde"></div>
+            <img src="imagens/ProductsImages/parmegianacarne.png" alt="Parmegiana de Carne" class="img-produto" />
+            <button class="botaoAbertura" onclick="toggleMensagem(this)">
+              Ingredientes
+            </button>
+            <div class="mensagem" style="display: none">
+              Ingredientes: Bife de carne bovina empanado, molho de tomate,
+              queijo muçarela, presunto (opcional), farinha de trigo, farinha de
+              rosca, ovos, sal, pimenta
+            </div>
+          </main>
+
+          <main class="comentários pesquisavel">
+            <h3>Nhoque ao Sugo</h3>
+            <div class="risquinho-verde"></div>
+            <img src="imagens/ProductsImages/nhoque_prato.png" alt="Nhoque ao Sugo" class="img-produto" />
+            <button class="botaoAbertura" onclick="toggleMensagem(this)">
+              Ingredientes
+            </button>
+            <div class="mensagem" style="display: none">
+              Ingredientes: Nhoque de batata, molho de tomate, alho, cebola,
+              azeite, sal, manjericão (opcional), queijo parmesão ralado
+            </div>
+          </main>
+
+          <main class="comentários pesquisavel">
+            <h3>Nhoque a Bolonhesa</h3>
+            <div class="risquinho-verde"></div>
+            <img src="imagens/ProductsImages/nhoquebolonesa.png" alt="Nhoque a Bolonesa" class="img-produto" />
+            <button class="botaoAbertura" onclick="toggleMensagem(this)">
+              Ingredientes
+            </button>
+            <div class="mensagem" style="display: none">
+              Ingredientes: Nhoque de batata, carne moída, molho de tomate,
+              alho, cebola, azeite, sal, pimenta, queijo parmesão ralado
+            </div>
+          </main>
+        </main>
+
+        <!-- Seção: Adicionais, Lanches e Pastéis -->
+        <div class="row mb-5" style="margin-top: 2em;">
+          <div class="col-12">
+            <h2 class="section-title">Adicionais, Lanches e Pastéis</h2>
+            <div class="section-underline"></div>
+          </div>
+
+          <!-- Contorno unico com lista dos adicionais -->
+          <div class="caixa-adicionais">
+            <ul class="lista-adicionais">
+              <li>Purê de Batata</li>
+              <li>Milho</li>
+              <li>Ovo</li>
+              <li>Ervilha</li>
+              <li>Catupiry</li>
+              <li>Cheddar</li>
+              <li>Cebola</li>
+              <li>Azeitona</li>
+              <li>Bacon</li>
+              <li>Presunto</li>
+              <li>Mussarela</li>
+            </ul>
+          </div>
+
+          <!-- Seção: Cerveja -->
+          <div class="row mb-5" style="margin-top: 2em;">
+            <div class="col-12">
+              <h2 class="section-title">Cerveja</h2>
+              <div class="section-underline"></div>
+            </div>
+
+            <!-- Primeira linha de cervejas -->
+
+            <main class="displayflex">
+              <main class="comentários pesquisavel">
+                <h3>Antarctica Boa</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/antarctica.png" alt="Antarctica Boa" class="img-produto" />
+              </main>
+              <main class="comentários pesquisavel">
+                <h3>Skol</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/skol.png" alt="Skol" class="img-produto" />
+              </main>
+
+              <main class="comentários pesquisavel">
+                <h3>Brahma</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/brahma.png" alt="Brahma" class="img-produto" />
+              </main>
+            </main>
+
+            <!-- Segunda linha de cervejas -->
+            <main class="displayflex">
+              <main class="comentários pesquisavel">
+                <h3>Império</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/imperio.png" alt="Império" class="img-produto" />
+              </main>
+
+              <main class="comentários pesquisavel">
+                <h3>Trieste</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/trieste.png" alt="Trieste" class="img-produto" />
+              </main>
+
+              <main class="comentários pesquisavel">
+                <h3>Amstel</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/amstel.png" alt="Amstel" class="img-produto" />
+              </main>
+            </main>
+
+            <!-- Terceira linha de cervejas -->
+            <main class="displayflex">
+              <main class="comentários pesquisavel">
+                <h3>EisenBahn</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/eisenbahn.png" alt="EisenBahn" class="img-produto" />
+              </main>
+
+              <main class="comentários pesquisavel">
+                <h3>Heineken</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/heinekn.png" alt="Heineken" class="img-produto" />
+              </main>
+
+              <main class="comentários pesquisavel">
+                <h3>Sem alcool</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/zeroalcool.png" alt="Sem alcool" class="img-produto" />
+              </main>
+            </main>
+
+            <!-- Quarta linha de cervejas -->
+            <main class="displayflex">
+              <main class="comentários pesquisavel">
+                <h3>Cerveja Malzbier</h3>
+                <div class="risquinho-verde"></div>
+                <img src="imagens/ProductsImages/malzbier.png" alt="Malzbier" class="img-produto" />
+              </main>
+            </main>
+
+            <!-- Seção: Garrafa 600ml -->
+            <div class="row mb-5" style="margin-top: 2em;">
+              <div class="col-12">
+                <h2 class="section-title">Garrafa 600ml</h2>
+                <div class="section-underline"></div>
+              </div> <!-- Primeira linha de garrafas -->
+
+              <main class="displayflex">
+                <main class="comentários pesquisavel">
+                  <h3>Antarctica Boa</h3>
+                  <div class="risquinho-verde"></div>
+                  <img src="imagens/ProductsImages/antartica600.png" alt="Antarctica Boa" class="img-produto" />
+                </main>
+
+                <main class="comentários pesquisavel">
+                  <h3>Skol</h3>
+                  <div class="risquinho-verde"></div>
+                  <img src="imagens/ProductsImages/skol600.png" alt="Skol" class="img-produto" />
+                </main>
+
+                <main class="comentários pesquisavel">
+                  <h3>Brahma</h3>
+                  <div class="risquinho-verde"></div>
+                  <img src="imagens/ProductsImages/brahma600.png" alt="Brahma" class="img-produto" />
+                </main>
+              </main>
+
+              <!-- Segunda linha de garrafas -->
+              <main class="displayflex">
+                <main class="comentários pesquisavel">
+                  <h3>Amstel</h3>
+                  <div class="risquinho-verde"></div>
+                  <img src="imagens/ProductsImages/amstel600.png" alt="Amstel" class="img-produto" />
+                </main>
+
+                <main class="comentários pesquisavel">
+                  <h3>Heineken</h3>
+                  <div class="risquinho-verde"></div>
+                  <img src="imagens/ProductsImages/heineken600.png" alt="Heineken" class="img-produto" />
+                </main>
+              </main>
+
+              <!-- Seção: Drinks -->
+              <div class="row mb-5" style="margin-top: 2em;">
+                <div class="col-12">
+                  <h2 class="section-title">Drinks</h2>
+                  <div class="section-underline"></div>
+                </div> <!-- Primeira linha de drinks -->
+
+                <main class="displayflex">
+                  <main class="comentários pesquisavel">
+                    <h3>Caipirinha de Limão(Vodka)</h3>
+                    <div class="risquinho-verde"></div>
+                    <img src="imagens/ProductsImages/caipirinha.png" alt="Caipirinha de Limão(Vodka)"
+                      class="img-produto" />
+                  </main>
+
+                  <main class="comentários pesquisavel">
+                    <h3>Caipirinha de Limão(Pinga)</h3>
+                    <div class="risquinho-verde"></div>
+                    <img src="imagens/ProductsImages/caipirinhapinga.png" alt="Caipirinha de Limão(Pinga)"
+                      class="img-produto" />
+                  </main>
+
+                  <main class="comentários pesquisavel">
+                    <h3>Campari(com gelo)</h3>
+                    <div class="risquinho-verde"></div>
+                    <img src="imagens/ProductsImages/campari.jpeg" alt="Campari(com gelo)" class="img-produto" />
+                  </main>
+                </main>
+
+                <!-- Segunda linha de drinks -->
+                <main class="displayflex">
+                  <main class="comentários pesquisavel">
+                    <h3>Campari(com gelo e suco de laranja)</h3>
+                    <div class="risquinho-verde"></div>
+                    <img src="imagens/ProductsImages/campari_laranja.jpeg" alt="Campari(com gelo e suco de laranja)"
+                      class="img-produto" />
+                  </main>
+
+                  <main class="comentários pesquisavel">
+                    <h3>Martini</h3>
+                    <div class="risquinho-verde"></div>
+                    <img src="imagens/ProductsImages/martini.jpg" alt="Martini" class="img-produto" />
+                  </main>
+
+                  <main class="comentários pesquisavel">
+                    <h3>Taça de Vinho Tinto</h3>
+                    <div class="risquinho-verde"></div>
+                    <img src="imagens/ProductsImages/vinho.jpeg" alt="Taça de Vinho Tinto" class="img-produto" />
+                  </main>
+                </main>
+    </main>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Logo simples do rodapé -->
+      <div class="footer-logo">
+        <img src="imagens/logo_simples.png" alt="Logo Lá em Casa" style="border-radius: 10%" />
+      </div>
+
+      <!-- Links sociais -->
+      <div class="footer-social">
+        <a href="https://wa.me/5517991889954?text=Ol%C3%A1!%20Acessei%20o%20site%20do%20L%C3%A1%20em%20Casa%20e%20gostaria%20de%20fazer%20um%20pedido%20ou%20tirar%20uma%20d%C3%BAvida!"
+          target="_blank">
+          <img src="imagens/icone_whats.png" alt="WhatsApp" />
+          <span class="social-text"> +55 (17) 99188-9954</span>
+        </a>
+        <br />
+        <a href="https://www.instagram.com/laemcasa_sjrp/" target="_blank" class="social-link">
+          <img src="imagens/icone_insta.png" alt="Instagram" />
+          <span class="social-text">@laemcasa_sjrp</span>
+        </a>
+        <br />
+      </div>
+
+      <!-- Mensagens e direitos autorais do rodapé -->
+      <div class="footer-copy">
+        <p class="footer-message">
+          "Lá em Casa — o sabor que te faz voltar!"
+        </p>
+        <p>© 2025 Lá em Casa. Todos os direitos reservados.</p>
+
+        <!-- Botão para voltar ao topo -->
+        <div class="botao-centro">
+          <a href="#" class="btn-topo">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

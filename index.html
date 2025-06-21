@@ -1,0 +1,352 @@
+<!Doctype html>
+<html lang="pt-br" data-bs-theme="auto">
+
+<head>
+  <!-- ====================== -->
+  <!-- METADADOS E CONFIGURAÇÕES -->
+  <!-- ====================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.145.0">
+  <title>Lá em Casa - Restaurante, bar e petiscaria</title>
+  <link rel="icon" href="imagens/Icone_Site.png">
+
+  <!-- ====================== -->
+  <!-- FOLHAS DE ESTILO -->
+  <!-- link do css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link href="carousel.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="../assets/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ====================== -->
+  <!-- SCRIPTS JAVASCRIPT -->
+  <!-- ====================== -->
+  <script src="assets/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="../assets/assets/js/color-modes.js"></script>
+</head>
+
+<body>
+  <!-- ====================== -->
+  <!-- CABEÇALHO / NAVEGAÇÃO -->
+  <!-- ====================== -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="imagens/logo.png" alt="Logo" style="height: 100px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Aqui sao os links pesquisaveis q propria pagina-->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active pesquisavel" href="#local">Local</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active pesquisavel" href="#horarios">Horários</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active pesquisavel" href="#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active pesquisavel" href="cardapio.html">Cardápio</a>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input id="searchInput" type="text" placeholder="pesquisar..." class="search-line hidden">
+            <img id="searchIcon" src="imagens/lupa.png" alt="OK" height="38" class="btn-img">
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====================== -->
+  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- ====================== -->
+  <main>
+    <!-- ====================== -->
+    <!-- CARROSSEL DE IMAGENS -->
+    <!-- ====================== -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="imagens/fachada.png" width="100%" height="140%" aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice">
+          <div class="container">
+            <div class="carousel-caption texto text-center">
+              <h1>Lá em Casa - Restaurante, bar e petiscaria</h1>
+              <p>O sabor que te faz voltar!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="imagens/cadeiras.png" width="100%" height="100%" aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice">
+          <div class="container">
+            <div class="carousel-caption texto text-center">
+              <h1>Petisco bom, cerveja gelada e papo de mesa!</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="imagens/comida_serv.png" width="100%" height="100%" aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice">
+          <div class="container">
+            <div class="carousel-caption texto text-center">
+              <h1>Da porção ao prato feito, aqui tem sabor de verdade em cada mordida!</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles do Carrossel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- ====================== -->
+    <!-- BOTÃO DO WHATSAPP -->
+    <!-- ====================== -->
+    <a href="https://wa.me/5517991889954?text=Ol%C3%A1!%20Acessei%20o%20site%20do%20L%C3%A1%20em%20Casa%20e%20gostaria%20de%20fazer%20um%20pedido%20ou%20tirar%20uma%20d%C3%BAvida!"
+      target="_blank">
+      <img src="imagens/icone_whats.png" alt="WhatsApp" width="65" class="whats-button">
+    </a>
+
+    <!-- ====================== -->
+    <!-- CONTEÚDO DE MARKETING -->
+    <!-- ====================== -->
+    <div>
+      <!-- Colunas de marketing -->
+      <div class="container marketing">
+        <!-- Linha do título com risquinhos -->
+        <div class="container marketing">
+
+          <!-- Título centralizado com riscos laranjas -->
+          <div class="row mb-5">
+            <div class="col-12">
+              <h2 class="section-title">Nossos Destaques</h2>
+              <div class="section-underline"></div>
+            </div>
+          </div>
+
+          <!-- Colunas dos destaques -->
+          <div class="row">
+            <div class="col-lg-4 text-center mb-4 card-prato">
+              <img class="bd-placeholder-img rounded-circle" width="260" height="135"
+                src="imagens/ProductsImages/estrogonoff_prato.png" role="img" aria-label="Placeholder"
+                preserveAspectRatio="xMidYMid slice">
+              <h3 class="fw-normal mt-3 pesquisavel">Estrogonofe de Frango</h3>
+              <div class="risquinho-verde"></div>
+              <p style="text-align: justify;">Peito de frango, creme de leite, molho de tomate, cebola, alho, sal,
+                pimenta-do-reino e óleo ou manteiga.</p>
+              <p><a class="btn btn-secondary" href="cardapio.html">Ver mais &raquo;</a></p>
+            </div>
+            <div class="col-lg-4 text-center mb-4 card-prato">
+              <img class="bd-placeholder-img rounded-circle" width="240" height="140"
+                src="imagens/ProductsImages/bifeacavalo.png" role="img" aria-label="Placeholder"
+                preserveAspectRatio="xMidYMid slice">
+              <h3 class="fw-normal mt-3 pesquisavel">Bife à Cavalo</h3>
+              <div class="risquinho-verde"></div>
+              <p style="text-align: justify;">Bife (alcatra, contra-filé ou outra carne bovina), ovo frito, alho, sal,
+                pimenta-do-reino e óleo para fritar.</p>
+              <p><a class="btn btn-secondary" href="cardapio.html">Ver mais &raquo;</a></p>
+            </div>
+            <div class="col-lg-4 text-center mb-4 card-prato">
+              <img class="bd-placeholder-img rounded-circle mx-auto d-block" width="180" height="100"
+                src="imagens/ProductsImages/parmegianacarne.png" alt="Parmegiana de Carne">
+              <h3 class="fw-normal mt-3 pesquisavel">Parmegiana de Carne</h3>
+              <div class="risquinho-verde"></div>
+              <p style="text-align: justify;">Bife de carne bovina empanado, molho de tomate, queijo muçarela e presunto
+                (opcional).</p>
+              <p><a class="btn btn-secondary" href="cardapio.html">Ver mais &raquo;</a></p>
+            </div>
+          </div>
+
+          <!-- ====================== -->
+          <!-- SEÇÕES DE INFORMAÇÕES -->
+          <!-- ====================== -->
+
+          <!-- Seção: Localização -->
+          <hr class="featurette-divider">
+          <div class="row featurette" id="local">
+            <div class="col-md-7 local-text" style="padding-left: 150px;">
+              <h2 class="featurette-heading fw-normal lh-1">Local</h2><br>
+              <p class="lead">📍 R. Santa Paula, 3468 - Eldorado,
+                <br> São José do Rio Preto - SP,15043-320, Brasil.
+              </p>
+            </div>
+            <div class="col-md-5 local-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d740.114707756749!2d-49.40061797788632!3d-20.793539281787783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdad05dbef5f67%3A0xb1b3ecab4bc3708e!2sR.%20Santa%20Paula%2C%203468%20-%20Eldorado%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Rio%20Preto%20-%20SP%2C%2015043-320!5e0!3m2!1spt-BR!2sbr!4v1750007361675!5m2!1spt-BR!2sbr"
+                class="map-iframe" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <!-- Seção: Horários de Funcionamento -->
+          <hr class="featurette-divider">
+          <div class="row featurette align-items-center" id="horarios">
+            <div class="col-md-7 order-md-2 ms-auto horarios-text">
+              <h2 class="featurette-heading fw-normal lh-1">🕒 Horários</h2><br>
+              <p class="lead">Confira os horários de funcionamento!</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <table class="table table-bordered text-center mb-0 custom-table">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Dia</th>
+                    <th>Almoço</th>
+                    <th>Jantar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Segunda-feira</td>
+                    <td>10:30 - 15:00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Terça-feira</td>
+                    <td>10:30 - 15:00</td>
+                    <td>18:00 - 22:30</td>
+                  </tr>
+                  <tr>
+                    <td>Quarta-feira</td>
+                    <td>10:30 - 15:00</td>
+                    <td>18:00 - 22:30</td>
+                  </tr>
+                  <tr>
+                    <td>Quinta-feira</td>
+                    <td>10:30 - 15:00</td>
+                    <td>18:00 - 22:30</td>
+                  </tr>
+                  <tr>
+                    <td>Sexta-feira</td>
+                    <td>10:30 - 15:00</td>
+                    <td>18:00 - 22:30</td>
+                  </tr>
+                  <tr>
+                    <td>Sábado</td>
+                    <td>10:30 - 15:00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Domingo</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Seção: Contato -->
+          <hr class="featurette-divider">
+          <div class="row featurette" id="contato">
+            <div class="col-md-5">
+              <h2 class="featurette-heading fw-normal lh-1">📞Contato</h2><br>
+              <p class="lead">Quer fazer seu pedido? Fale com a gente agora mesmo!</p>
+            </div>
+
+            <div class="col-md-7 contact-table" style="margin-top: 100px;">
+              <table class="table table-bordered text-center mb-0 custom-table">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Contato</th>
+                    <th>Links</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="imagens/icone_whatsapp2.png" alt="WhatsApp" class="social-icon">
+                      WhatsApp</td>
+                    <td>
+                      <a href="https://wa.me/5517991889954?text=Ol%C3%A1!%20Acessei%20o%20site%20do%20L%C3%A1%20em%20Casa%20e%20gostaria%20de%20fazer%20um%20pedido%20ou%20tirar%20uma%20d%C3%BAvida!"
+                        target="_blank" class="social-link">
+                        +55 (17) 99188-9954
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="imagens/icone_insta2.png" alt="Instagram" class="social-icon">
+                      Instagram</td>
+                    <td>
+                      <a href="https://www.instagram.com/laemcasa_sjrp/" target="_blank" class="social-link">
+                        <img src="imagens/icone_insta.png" alt="Instagram" class="social-icon">
+                        @laemcasa_sjrp
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+        </div>
+  </main>
+
+  <!-- ====================== -->
+  <!-- RODAPÉ -->
+  <!-- ====================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="imagens/logo_simples.png" alt="Logo Lá em Casa" style="border-radius: 10%;">
+      </div>
+
+      <div class="footer-social">
+        <a href="https://wa.me/5517991889954?text=Ol%C3%A1!%20Acessei%20o%20site%20do%20L%C3%A1%20em%20Casa%20e%20gostaria%20de%20fazer%20um%20pedido%20ou%20tirar%20uma%20d%C3%BAvida!"
+          target="_blank">
+          <img src="imagens/icone_whats.png" alt="WhatsApp">
+          <span class="social-text"> +55 (17) 99188-9954</span>
+        </a><br>
+        <a href="https://www.instagram.com/laemcasa_sjrp/" target="_blank" class="social-link">
+          <img src="imagens/icone_insta.png" alt="Instagram">
+          <span class="social-text">@laemcasa_sjrp</span>
+        </a><br>
+      </div>
+
+      <div class="footer-copy">
+        <p class="footer-message">"Lá em Casa — o sabor que te faz voltar!"</p>
+        <p>© 2025 Lá em Casa. Todos os direitos reservados.</p>
+
+        <div class="botao-centro">
+          <a href="#" class="btn-topo">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
